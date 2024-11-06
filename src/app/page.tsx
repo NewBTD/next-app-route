@@ -1,5 +1,4 @@
 "use client"
-import Image from "next/image";
 import { FormEvent, useEffect, useState } from "react";
 
 export default function Home() {
@@ -9,40 +8,32 @@ export default function Home() {
   }, [])
 
   const fetchAPI = async () => {
-    let headersList = {
-      "Accept": "*/*",
-      "User-Agent": "Thunder Client (https://www.thunderclient.com)"
-    }
-    let response = await fetch("https://glowing-space-fortnight-qwgjw6q5x992xqgx-3000.app.github.dev/api", {
-      method: "GET",
-      headers: headersList
-    });
+    // แก้ URL Endpoint ให้เป็นของตัวเอง
+    // let response = await fetch("https://glowing-space-fortnight-qwgjw6q5x992xqgx-3000.app.github.dev/api", {
+      // method: "GET",
+    // });
 
-    let data = await response.json();
-    console.log(data);
+
+    // let data = await response.json();
+    // console.log(data)
   }
-  const handleFormSubmit = async (e: FormEvent<SubmitEvent>) => {
-    e.preventDefault()
-    const weight = document.getElementById('w').value
-    const height = document.getElementById('h').value
-    let bodyContent = JSON.stringify({
-      "id": 2,
-      "weight": weight,
-      "height": height
-    });
-    let headersList = {
-      "Accept": "*/*",
-      "User-Agent": "Thunder Client (https://www.thunderclient.com)"
-    }
-    let response = await fetch("https://glowing-space-fortnight-qwgjw6q5x992xqgx-3000.app.github.dev/api", {
-      method: "POST",
-      headers: headersList,
-      body: bodyContent
-    });
+  const handleFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    // e.preventDefault()
+    // const weight = (document.getElementById("w") as HTMLInputElement).value
+    // const height = (document.getElementById("h") as HTMLInputElement).value
 
-    const data = await response.json()
-    console.log(data.body.bmi)
-    setResult(data.body.bmi)
+    // เพิ่ม bodyContent หลังจากบรรทัดนี้
+    // .....
+
+
+    // แก้ URL Endpoint เป็นของตัวเอง
+    // let response = await fetch("https://bookish-space-sniffle-5xqpx59qvqg2wq9-3000.app.github.dev/api", {
+    //   method: "POST",
+    //   body: bodyContent
+    // });
+
+    // const data = await response.json()
+    // setResult(data.body.bmi)
   }
   return (
     <div className="flex justify-center items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">

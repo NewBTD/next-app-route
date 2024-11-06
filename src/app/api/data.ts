@@ -4,14 +4,14 @@ export const products = [
     name: "Product 1",
     price: 10,
     description: "Description of Product 1",
-    image: "https://via.placeholder.com/150",
+    image: "https://via.placeholder.com/150x150",
   },
   {
     id: 2,
     name: "Product 2",
     price: 20,
     description: "Description of Product 2",
-    image: "https://via.placeholder.com/150",
-  },// Add more products here
+    image: "https://via.placeholder.com/150x150",
+  },
 ];
 
